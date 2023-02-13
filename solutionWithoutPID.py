@@ -19,7 +19,10 @@ def _mouseMoveDrag(xOffset, yOffset):
 
 def _distance(xOffset, yOffset, xTarget, yTarget):
 
-    r2 = np.square(xOffset - xTarget, yOffset - yTarget)
+    x2 = np.power(xOffset - xTarget, 2)
+    y2 = np.power(yOffset - yTarget, 2)
+
+    r2 = x2 + y2
 
     return np.sqrt(r2)
 
